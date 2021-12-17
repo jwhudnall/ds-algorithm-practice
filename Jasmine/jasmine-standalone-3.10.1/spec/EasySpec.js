@@ -29,3 +29,18 @@ describe('isValid', () => {
     expect(actual).toBe(false);
   });
 });
+
+describe('romanToInt', () => {
+  it('Returns the correct value for \'III\'.',() => {
+    var actual = romanToInt('III');
+    expect(actual).toEqual(3);
+  });
+  it('Returns the correct value for \'LVIII\'.',() => {
+    var actual = romanToInt('LVIII');
+    expect(actual).toEqual(58);
+  });
+  it('Returns the correct value for \'MCMXCIV\'.',() => {
+    var actual = romanToInt('MCMXCIV1994');
+    expect(actual).toEqual(1994);
+  });
+});

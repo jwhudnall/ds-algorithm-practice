@@ -35,6 +35,14 @@ describe('romanToInt', () => {
     var actual = romanToInt('III');
     expect(actual).toEqual(3);
   });
+  it('Returns the correct value for \'XLIX\'.',() => {
+    var actual = romanToInt('XLIX');
+    expect(actual).toEqual(49);
+  });
+  it('Returns the correct value for \'LIV\'.',() => {
+    var actual = romanToInt('LIV');
+    expect(actual).toEqual(54);
+  });
   it('Returns the correct value for \'LVIII\'.',() => {
     var actual = romanToInt('LVIII');
     expect(actual).toEqual(58);

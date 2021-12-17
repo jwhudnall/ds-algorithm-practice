@@ -9,4 +9,15 @@ describe('twoSum', () => {
     var expected = [1,2];
     expect(actual).toEqual(expected);
   })
+});
+
+describe('isValid', () => {
+  it('Returns true for valid strings', () => {
+    var actual = isValid('(){}[]');
+    expect(actual).toBe(true);
+  });
+  it('Returns false for invalid strings', () => {
+    var actual = isValid('(]');
+    expect(actual).toBe(false);
+  })
 })

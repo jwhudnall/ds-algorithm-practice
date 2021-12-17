@@ -16,8 +16,16 @@ describe('isValid', () => {
     var actual = isValid('(){}[]');
     expect(actual).toBe(true);
   });
+  it('Returns true for valid, complex strings', () => {
+    var actual = isValid('[((){[]})]');
+    expect(actual).toBe(true);
+  });
   it('Returns false for invalid strings', () => {
     var actual = isValid('(]');
     expect(actual).toBe(false);
-  })
-})
+  });
+  it('Returns false for invalid strings', () => {
+    var actual = isValid('([{})]');
+    expect(actual).toBe(false);
+  });
+});

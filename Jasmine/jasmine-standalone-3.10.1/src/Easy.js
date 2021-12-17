@@ -41,3 +41,39 @@ var isValid = function(s) {
 
   return stack.length === 0;
 };
+
+var romanToInt = function(s) {
+  const values = {
+    'I' : 1,
+    'V' : 5,
+    'X' : 10,
+    'L' : 50,
+    'C' : 100,
+    'D' : 500,
+    'M' : 1000
+  };
+  let total = 0;
+  let i = 0;
+
+  while (i < s.length) {
+    let current = s[i];
+    let next = s[i + 1];
+
+    if (current === 'I' && (next === 'V' || next === 'X')) {
+      total += values[next] - values[current];
+      i += 2;
+    }
+    else if (current === 'X' && (next === 'L' || next === 'C')) {
+      total += values[next] - values[current];
+      i += 2;
+    }
+    else if (current === 'C' && (next === 'D' || next === 'M')) {
+      total += values[next] - values[current];
+      i += 2;
+    } else {
+      total += values[current];
+      i += 1;
+    }
+  }
+  return total;
+};

@@ -1,6 +1,7 @@
 // LeetCode Problem Solutions - Difficulty: Easy
 
 // Two Sum - https://leetcode.com/problems/two-sum/
+// Notes: Solution uses a hash map to reduce complexity to N.
 var twoSum = function(nums, target) {
   const hash = {};
 

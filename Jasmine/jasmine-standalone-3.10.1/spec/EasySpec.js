@@ -48,7 +48,7 @@ describe('romanToInt', () => {
     expect(actual).toEqual(58);
   });
   it('Returns the correct value for \'MCMXCIV\'.',() => {
-    var actual = romanToInt('MCMXCIV1994');
+    var actual = romanToInt('MCMXCIV');
     expect(actual).toEqual(1994);
   });
 });

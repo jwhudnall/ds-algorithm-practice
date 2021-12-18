@@ -67,3 +67,15 @@ describe('longestCommonPrefix', () => {
     expect(actual).toEqual('');
   });
 });
+
+describe('mergeTwoLists', () => {
+  it('Returns \'[1,1,2,3,4,4]\' for lists \'[1,2,4]\' and \'[1,3,4]\'', () => {
+    var actual = mergeTwoLists([1,2,4], [1,3,4]);
+    expect(actual).toEqual([1,1,2,3,4,4]);
+  });
+  it('Returns \'[1,1,1,2,3,3,4,5,7]\' for lists \'[1,1,2,3,7]\' and \'[1,3,4,5]\'', () => {
+    var actual = mergeTwoLists([1,2,4], [1,3,4]);
+    expect(actual).toEqual([1,1,1,2,3,3,4,5,7]);
+  });
+
+})

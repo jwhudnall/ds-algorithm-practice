@@ -42,6 +42,7 @@ var isValid = function(s) {
   return stack.length === 0;
 };
 
+// Roman to Integer - https://leetcode.com/problems/roman-to-integer/
 var romanToInt = function(s) {
   const values = {
     'I' : 1,
@@ -68,4 +69,9 @@ var romanToInt = function(s) {
   }
 
   return total;
+};
+
+// Longest Common Prefix - https://leetcode.com/problems/longest-common-prefix/
+var longestCommonPrefix = function(strs) {
+
 };

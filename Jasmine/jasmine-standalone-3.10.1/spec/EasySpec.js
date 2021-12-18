@@ -51,4 +51,19 @@ describe('romanToInt', () => {
     var actual = romanToInt('MCMXCIV');
     expect(actual).toEqual(1994);
   });
+
+describe('longestCommonPrefix', () => {
+  it('Returns the common prefix \'fl\'', () => {
+    var actual = longestCommonPrefix(["flower","flow","flight"]);
+    expect(actual).toEqual('fl');
+  });
+  it('Returns the common prefix \'swe\'', () => {
+    var actual = longestCommonPrefix(["sweden","sweet","sweat"]);
+    expect(actual).toEqual('swe');
+  });
+  it('Returns empty string', () => {
+    var actual = longestCommonPrefix(["dog","racecar","car"]);
+    expect(actual).toEqual('');
+  });
+});
 });

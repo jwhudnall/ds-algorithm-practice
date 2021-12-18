@@ -1,12 +1,12 @@
 describe('twoSum', () => {
   it('Returns the correct indices for [2,7,11,15]', () => {
-    var actual = twoSum([2,7,11,15], 9);
+    var actual = twoSum([2, 7, 11, 15], 9);
     var expected = [0, 1];
     expect(actual).toEqual(expected);
   });
   it('Returns the correct indices for [3,2,4]', () => {
-    var actual = twoSum([3,2,4], 6);
-    var expected = [1,2];
+    var actual = twoSum([3, 2, 4], 6);
+    var expected = [1, 2];
     expect(actual).toEqual(expected);
   })
 });
@@ -31,39 +31,39 @@ describe('isValid', () => {
 });
 
 describe('romanToInt', () => {
-  it('Returns the correct value for \'III\'.',() => {
+  it('Returns the correct value for \'III\'.', () => {
     var actual = romanToInt('III');
     expect(actual).toEqual(3);
   });
-  it('Returns the correct value for \'XLIX\'.',() => {
+  it('Returns the correct value for \'XLIX\'.', () => {
     var actual = romanToInt('XLIX');
     expect(actual).toEqual(49);
   });
-  it('Returns the correct value for \'LIV\'.',() => {
+  it('Returns the correct value for \'LIV\'.', () => {
     var actual = romanToInt('LIV');
     expect(actual).toEqual(54);
   });
-  it('Returns the correct value for \'LVIII\'.',() => {
+  it('Returns the correct value for \'LVIII\'.', () => {
     var actual = romanToInt('LVIII');
     expect(actual).toEqual(58);
   });
-  it('Returns the correct value for \'MCMXCIV\'.',() => {
+  it('Returns the correct value for \'MCMXCIV\'.', () => {
     var actual = romanToInt('MCMXCIV');
     expect(actual).toEqual(1994);
   });
+});
 
 describe('longestCommonPrefix', () => {
   it('Returns the common prefix \'fl\'', () => {
-    var actual = longestCommonPrefix(["flower","flow","flight"]);
+    var actual = longestCommonPrefix(["flower", "flow", "flight"]);
     expect(actual).toEqual('fl');
   });
   it('Returns the common prefix \'swe\'', () => {
-    var actual = longestCommonPrefix(["sweden","sweet","sweat"]);
+    var actual = longestCommonPrefix(["sweden", "sweet", "sweat"]);
     expect(actual).toEqual('swe');
   });
   it('Returns empty string', () => {
-    var actual = longestCommonPrefix(["dog","racecar","car"]);
+    var actual = longestCommonPrefix(["dog", "racecar", "car"]);
     expect(actual).toEqual('');
   });
-});
 });

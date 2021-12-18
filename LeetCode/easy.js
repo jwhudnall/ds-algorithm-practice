@@ -52,28 +52,20 @@ var romanToInt = function(s) {
     'D' : 500,
     'M' : 1000
   };
+
   let total = 0;
-  let i = 0;
 
-  while (i < s.length) {
-    let current = s[i];
-    let next = s[i + 1];
+  for (let i = 0; i < s.length; i++) {
+    let current = values[s[i]];
+    let next = values[s[i + 1]];
 
-    if (current === 'I' && (next === 'V' || next === 'X')) {
-      total += values[next] - values[current];
-      i += 2;
-    }
-    else if (current === 'X' && (next === 'L' || next === 'C')) {
-      total += values[next] - values[current];
-      i += 2;
-    }
-    else if (current === 'C' && (next === 'D' || next === 'M')) {
-      total += values[next] - values[current];
-      i += 2;
+    if (current < next) {
+      total += next - current;
+      i++;
     } else {
-      total += values[current];
-      i += 1;
+      total += current;
     }
   }
+
   return total;
 };

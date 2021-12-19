@@ -73,9 +73,6 @@ var romanToInt = function (s) {
 
 // Longest Common Prefix - https://leetcode.com/problems/longest-common-prefix/
 var longestCommonPrefix = function (strs) {
-  // Use double loop to compare all chars of first word with all chars of others
-
-  // Handle empty array, array with 1 word
   let prefix = '';
   if (strs.length === 0 || strs.length === 1) {
     return prefix;
@@ -91,4 +88,15 @@ var longestCommonPrefix = function (strs) {
     prefix += char;
   }
   return prefix;
+};
+
+// 283. Move Zeroes - https://leetcode.com/problems/move-zeroes/
+var moveZeroes = function(nums) {
+  for (let i = nums.length - 1; i >= 0; i--) {
+    if (nums[i] === 0) {
+      nums.splice(i,1);
+      nums.push(0);
+    }
+  }
+  return nums;
 };

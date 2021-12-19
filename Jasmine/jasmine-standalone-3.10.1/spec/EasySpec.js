@@ -68,14 +68,26 @@ describe('longestCommonPrefix', () => {
   });
 });
 
-describe('mergeTwoLists', () => {
-  it('Returns \'[1,1,2,3,4,4]\' for lists \'[1,2,4]\' and \'[1,3,4]\'', () => {
-    var actual = mergeTwoLists([1,2,4], [1,3,4]);
-    expect(actual).toEqual([1,1,2,3,4,4]);
+describe('moveZeroes', () => {
+  it('Should correctly move zeroes to end for \'[0,1,0,3,12]\'', () => {
+    let actual = moveZeroes([0,1,0,3,12]);
+    expect(actual).toEqual([1,3,12,0,0]);
   });
-  it('Returns \'[1,1,1,2,3,3,4,5,7]\' for lists \'[1,1,2,3,7]\' and \'[1,3,4,5]\'', () => {
-    var actual = mergeTwoLists([1,2,4], [1,3,4]);
-    expect(actual).toEqual([1,1,1,2,3,3,4,5,7]);
+  it('Should correctly move zeroes to end for \'[0]\'', () => {
+    let actual = moveZeroes([0]);
+    expect(actual).toEqual([0]);
+  });
+  it('Should correctly move zeroes to end for \'[0,5,0,4,0,3,0,2,0,1,0]\'', () => {
+    let actual = moveZeroes([0,5,0,4,0,3,0,2,0,1,0]);
+    expect(actual).toEqual([5,4,3,2,1,0,0,0,0,0,0]);
+  });
+  it('Should correctly move zeroes to end for \'[0,1,0,3,12]\'', () => {
+    let actual = moveZeroes([0,1,0,3,12]);
+    expect(actual).toEqual([1,3,12,0,0]);
+  });
+  it('Should correctly move zeroes to end for \'[0,0,1]\'', () => {
+    let actual = moveZeroes([0,0,1]);
+    expect(actual).toEqual([1,0,0]);
   });
 
-})
+});

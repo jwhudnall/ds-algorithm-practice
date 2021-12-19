@@ -100,3 +100,21 @@ var moveZeroes = function(nums) {
   }
   return nums;
 };
+
+// 35. Search Insert Position - https://leetcode.com/problems/search-insert-position/
+var searchInsert = function(nums, target) {
+  let left = 0;
+  let right = nums.length;
+
+  while (left < right) {
+    let mid = left + Math.floor((right - left) / 2);
+    if (nums[mid] === target) {
+      return mid;
+    } else if (nums[mid] < target) {
+      left = mid + 1;
+    } else {
+      right = mid;
+    }
+  }
+  return left;
+};

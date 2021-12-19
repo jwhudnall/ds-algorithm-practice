@@ -89,5 +89,20 @@ describe('moveZeroes', () => {
     let actual = moveZeroes([0,0,1]);
     expect(actual).toEqual([1,0,0]);
   });
+});
+
+describe('searchInsert', () => {
+  it('Should return correct index for \'[1,3,5,6], 5\'', () => {
+    let actual = searchInsert([1,3,5,6], 5);
+    expect(actual).toBe(2);
+  });
+  it('Should return correct index for \'[1,3,5,6], 2\'', () => {
+    let actual = searchInsert([1,3,5,6], 2);
+    expect(actual).toBe(1);
+  });
+  it('Should return correct index for \'[1,3,5,6], 7\'', () => {
+    let actual = searchInsert([1,3,5,6], 7);
+    expect(actual).toBe(4);
+  });
 
 });

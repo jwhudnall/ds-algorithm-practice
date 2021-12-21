@@ -104,5 +104,19 @@ describe('searchInsert', () => {
     let actual = searchInsert([1,3,5,6], 7);
     expect(actual).toBe(4);
   });
-
 });
+
+describe('maxSubArray', () => {
+  it('Should return a sum of 6 for \'[-2,1,-3,4,-1,2,1,-5,4]\'', () => {
+    let actual = maxSubArray([-2,1,-3,4,-1,2,1,-5,4]);
+    expect(actual).toEqual(6);
+  })
+  it('Should return a sum of 1 for \'[1]\'', () => {
+    let actual = maxSubArray([1]);
+    expect(actual).toEqual(1);
+  })
+  it('Should return a sum of 23 for \'[5,4,-1,7,8]\'', () => {
+    let actual = maxSubArray([5,4,-1,7,8]);
+    expect(actual).toEqual(23);
+  })
+})

@@ -118,3 +118,18 @@ var searchInsert = function(nums, target) {
   }
   return left;
 };
+
+// 53. Maximum SubArray - https://leetcode.com/problems/maximum-subarray/
+// Reference: https://medium.com/@rsinghal757/kadanes-algorithm-dynamic-programming-how-and-why-does-it-work-3fd8849ed73d
+
+var maxSubArray = function(nums) {
+  if (nums.length === 0) return nums[0];
+  let max = nums[0];
+  let subArrSum = nums[0];
+
+  for (let i = 1; i < nums.length; i++) {
+    subArrSum = Math.max(nums[i], nums[i] + subArrSum);
+    if (subArrSum > max) max = subArrSum;
+  }
+  return max;
+};

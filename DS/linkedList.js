@@ -37,6 +37,13 @@ class LinkedList {
   getFirst() {
     return this.head;
   }
-  // insert()
-  // remove()
+  insert(index, data) {
+    let pointer = this.head;
+    for (let i = 0; i < index - 1; i++) {
+      pointer = pointer.next;
+    }
+    var newNode = new ListNode(data);
+    newNode.next = pointer.next;
+    pointer.next = newNode;
+  }
 }

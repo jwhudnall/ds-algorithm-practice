@@ -2,20 +2,6 @@
 
 // Two Sum - https://leetcode.com/problems/two-sum/
 // Notes: Solution uses a hash map to reduce complexity to N.
-// var twoSum = function (nums, target) {
-//   const hash = {};
-
-//   for (let i = 0; i < nums.length; i++) {
-//     const val = nums[i];
-//     const need = target - val;
-//     if (hash.hasOwnProperty(need)) {
-//       return [hash[need], i];
-//     }
-//     hash[val] = i;
-//   }
-//   return [];
-// };
-
 var twoSum = function (nums, target) {
   const hash = {};
 
@@ -133,7 +119,6 @@ var searchInsert = function(nums, target) {
 
 // 53. Maximum SubArray - https://leetcode.com/problems/maximum-subarray/
 // Reference: https://medium.com/@rsinghal757/kadanes-algorithm-dynamic-programming-how-and-why-does-it-work-3fd8849ed73d
-
 var maxSubArray = function(nums) {
   if (nums.length === 0) return nums[0];
   let max = nums[0];
@@ -144,4 +129,9 @@ var maxSubArray = function(nums) {
     if (subArrSum > max) max = subArrSum;
   }
   return max;
+};
+
+// 217. Contains Duplicate - https://leetcode.com/problems/contains-duplicate/
+var containsDuplicate = function(nums) {
+
 };

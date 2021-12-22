@@ -125,3 +125,15 @@ describe('maxSubArray', () => {
     expect(actual).toEqual(23);
   })
 })
+
+describe('containsDuplicate', () => {
+  it('Should return true for [1,2,3,1]', () => {
+    expect(containsDuplicate([1,2,3,1])).toBe(true);
+  });
+  it('Should return false for [1,2,3,4]', () => {
+    expect(containsDuplicate([1,2,3,4])).toBe(false);
+  });
+  it('Should return true for [1,1,1,3,3,4,3,2,4,2]', () => {
+    expect(containsDuplicate([1,1,1,3,3,4,3,2,4,2])).toBe(true);
+  });
+});

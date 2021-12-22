@@ -133,9 +133,13 @@ var maxSubArray = function(nums) {
 
 // 217. Contains Duplicate - https://leetcode.com/problems/contains-duplicate/
 var containsDuplicate = function(nums) {
+  const hash = {};
+
   for (let i = 0; i < nums.length; i++) {
-    if (nums.indexOf(nums[i]) !== i) {
+    if (hash[nums[i]] !== undefined) {
       return true;
+    } else {
+      hash[nums[i]] = i;
     }
   }
   return false;

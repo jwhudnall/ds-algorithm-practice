@@ -89,10 +89,10 @@ var longestCommonPrefix = function (strs) {
 };
 
 // 283. Move Zeroes - https://leetcode.com/problems/move-zeroes/
-var moveZeroes = function(nums) {
+var moveZeroes = function (nums) {
   for (let i = nums.length - 1; i >= 0; i--) {
     if (nums[i] === 0) {
-      nums.splice(i,1);
+      nums.splice(i, 1);
       nums.push(0);
     }
   }
@@ -100,7 +100,7 @@ var moveZeroes = function(nums) {
 };
 
 // 35. Search Insert Position - https://leetcode.com/problems/search-insert-position/
-var searchInsert = function(nums, target) {
+var searchInsert = function (nums, target) {
   let left = 0;
   let right = nums.length;
 
@@ -119,7 +119,7 @@ var searchInsert = function(nums, target) {
 
 // 53. Maximum SubArray - https://leetcode.com/problems/maximum-subarray/
 // Reference: https://medium.com/@rsinghal757/kadanes-algorithm-dynamic-programming-how-and-why-does-it-work-3fd8849ed73d
-var maxSubArray = function(nums) {
+var maxSubArray = function (nums) {
   if (nums.length === 0) return nums[0];
   let max = nums[0];
   let subArrSum = nums[0];
@@ -132,14 +132,14 @@ var maxSubArray = function(nums) {
 };
 
 // 217. Contains Duplicate - https://leetcode.com/problems/contains-duplicate/
-var containsDuplicate = function(nums) {
+var containsDuplicate = function (nums) {
   const hash = {};
 
   for (let i = 0; i < nums.length; i++) {
-    if (hash[nums[i]] !== undefined) {
-      return true;
-    } else {
+    if (hash[nums[i]] === undefined) {
       hash[nums[i]] = i;
+    } else {
+      return true;
     }
   }
   return false;

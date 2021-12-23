@@ -149,3 +149,24 @@ describe('maxProfit', () => {
     expect(maxProfit([1,6,2,5,6])).toBe(5);
   });
 });
+
+describe('lengthOfLastWord', () => {
+  it('Should return 5 for input "Hello World" ', () => {
+    expect(lengthOfLastWord("Hello World")).toBe(5);
+  });
+  it('Should return 4 for input "   fly me   to   the moon  "', () => {
+    expect(lengthOfLastWord("   fly me   to   the moon  ")).toBe(4);
+  });
+  it('Should return 6 for input "luffy is still joyboy"', () => {
+    expect(lengthOfLastWord("luffy is still joyboy")).toBe(6);
+  });
+  it('Should return 1 for input "a"', () => {
+    expect(lengthOfLastWord("a")).toBe(1);
+  });
+  it('Should return 1 for input " a"', () => {
+    expect(lengthOfLastWord(" a")).toBe(1);
+  });
+  it('Should return 1 for input "a "', () => {
+    expect(lengthOfLastWord("a ")).toBe(1);
+  });
+});

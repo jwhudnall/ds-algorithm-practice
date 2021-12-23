@@ -161,3 +161,26 @@ var maxProfit = function (prices) {
   }
   return gain;
 };
+
+// 58. Length of Last Word
+// Solution using buil-in JS methods:
+
+// var lengthOfLastWord = function(s) {
+//   let str = s.slice().trimRight().split(' ');
+//   return str[str.length - 1].length;
+// };
+
+var lengthOfLastWord = function(s) {
+  let charCount = 0;
+
+  for (let i = s.length - 1; i >= 0; i--) {
+    let char = s[i];
+    if (char !== ' ') {
+      charCount++;
+    }
+    if (char === ' ' && charCount >= 1) {
+      return charCount;
+    }
+  }
+  return charCount;
+};

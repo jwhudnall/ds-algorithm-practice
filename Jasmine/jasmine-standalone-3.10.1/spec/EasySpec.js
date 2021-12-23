@@ -137,3 +137,15 @@ describe('containsDuplicate', () => {
     expect(containsDuplicate([1,1,1,3,3,4,3,2,4,2])).toBe(true);
   });
 });
+
+describe('maxProfit', () => {
+  it('Should return 5 for input [7,1,5,3,6,4]', () => {
+    expect(maxProfit([7,1,5,3,6,4])).toBe(5);
+  });
+  it('Should return 0 for input [7,6,4,3,1]', () => {
+    expect(maxProfit([7,6,4,3,1])).toBe(0);
+  });
+  it('Should return 5 for input [1,6,2,5,6]', () => {
+    expect(maxProfit([1,6,2,5,6])).toBe(5);
+  });
+});

@@ -144,3 +144,20 @@ var containsDuplicate = function (nums) {
   }
   return false;
 };
+
+// 121. Best Time to Buy and Sell Stock - https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+var maxProfit = function (prices) {
+  let gain = 0;
+  let buy = prices[0];
+
+  for (let i = 1; i < prices.length; i++) {
+    let delta = prices[i] - buy;
+    if (prices[i] < buy) {
+      buy = prices[i]
+    }
+    if (delta > gain) {
+      gain = delta;
+    }
+  }
+  return gain;
+};

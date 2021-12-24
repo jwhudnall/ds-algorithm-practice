@@ -184,3 +184,8 @@ var lengthOfLastWord = function(s) {
   }
   return charCount;
 };
+
+// 70. Climbing Stairs - https://leetcode.com/problems/climbing-stairs/
+var climbStairs = function(n) {
+
+};

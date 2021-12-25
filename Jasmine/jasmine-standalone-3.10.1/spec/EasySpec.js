@@ -173,12 +173,12 @@ describe('lengthOfLastWord', () => {
 
 describe('climbStairs', () => {
   it('Should return 2 for input: 2', () => {
-    expect(climbStairs(2).toEqual(2));
+    expect(climbStairs(2)).toEqual(2);
   });
   it('Should return 3 for input: 3', () => {
-    expect(climbStairs(3).toEqual(3));
+    expect(climbStairs(3)).toEqual(3);
   });
   it('Should return 8 for input: 5', () => {
-    expect(climbStairs(5).toEqual(8));
+    expect(climbStairs(5)).toEqual(8);
   });
 });

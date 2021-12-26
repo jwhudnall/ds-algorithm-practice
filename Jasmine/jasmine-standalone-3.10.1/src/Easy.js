@@ -249,3 +249,12 @@ var mergeTwoLists = function (list1, list2) {
 
   return head.next;
 };
+
+// 268. Missing Number - https://leetcode.com/problems/missing-number/
+var missingNumber = function(nums) {
+  const n = nums.length;
+  const fullSum = n * (n + 1) / 2;
+  const actualSum = nums.reduce((total, acc) => total + acc);
+
+  return fullSum - actualSum;
+};

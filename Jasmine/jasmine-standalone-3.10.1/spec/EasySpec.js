@@ -193,4 +193,17 @@ describe('isAnagram', () => {
   it('Should return false for "Debit Card" and "Bad Credit"', () => {
     expect(isAnagram("Debit Card", "Bad Credit")).toBe(true);
   });
-})
+});
+
+describe('missingNumber', () => {
+  it('Should return 2 for [3,0,1]', () => {
+    expect(missingNumber([3,0,1])).toEqual(2);
+  });
+  it('Should return 2 for [0,1]', () => {
+    expect(missingNumber([0,1])).toEqual(2);
+  });
+  it('Should return 2 for [9,6,4,2,3,5,7,0,1]', () => {
+    expect(missingNumber([9,6,4,2,3,5,7,0,1])).toEqual(8);
+  });
+
+});

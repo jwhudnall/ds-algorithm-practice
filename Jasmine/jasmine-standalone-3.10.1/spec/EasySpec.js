@@ -182,3 +182,15 @@ describe('climbStairs', () => {
     expect(climbStairs(5)).toEqual(8);
   });
 });
+
+describe('isAnagram', () => {
+  it('Should return true for "anagram" and "nagaram"', () => {
+    expect(isAnagram("anagram", "nagaram")).toBe(true);
+  });
+  it('Should return false for "rat" and "car"', () => {
+    expect(isAnagram("rat", "car")).toBe(false);
+  });
+  it('Should return false for "Debit Card" and "Bad Credit"', () => {
+    expect(isAnagram("Debit Card", "Bad Credit")).toBe(true);
+  });
+})

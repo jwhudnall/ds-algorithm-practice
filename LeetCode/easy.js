@@ -170,7 +170,7 @@ var maxProfit = function (prices) {
 //   return str[str.length - 1].length;
 // };
 
-var lengthOfLastWord = function(s) {
+var lengthOfLastWord = function (s) {
   let charCount = 0;
 
   for (let i = s.length - 1; i >= 0; i--) {
@@ -186,7 +186,7 @@ var lengthOfLastWord = function(s) {
 };
 
 // 70. Climbing Stairs - https://leetcode.com/problems/climbing-stairs/
-var climbStairs = function(n) {
+var climbStairs = function (n) {
   let one = 1;
   let two = 1;
 
@@ -196,4 +196,29 @@ var climbStairs = function(n) {
     two = temp;
   }
   return one;
+};
+
+// 242. Valid Anagram - https://leetcode.com/problems/valid-anagram/
+var isAnagram = function (s, t) {
+  const hash1 = {};
+  const hash2 = {};
+
+  for (let i = 0; i < s.length; i++) {
+    if (s[i] === ' ') { continue; }
+    let sChar = s[i].toLowerCase();
+    hash1[sChar] = (hash1[sChar] || 0) + 1;
+  }
+  for (let i = 0; i < t.length; i++) {
+    if (t[i] === ' ') { continue; }
+    let tChar = t[i].toLowerCase();
+    hash2[tChar] = (hash2[tChar] || 0) + 1;
+  }
+
+  for (let key in hash1) {
+    if (hash1[key] !== hash2[key]) {
+      return false;
+    }
+  }
+
+  return Object.keys(hash1).length === Object.keys(hash2).length;
 };

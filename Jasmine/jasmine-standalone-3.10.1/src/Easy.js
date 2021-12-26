@@ -204,14 +204,16 @@ var isAnagram = function (s, t) {
   const hash2 = {};
 
   for (let i = 0; i < s.length; i++) {
-    if (s[i] === ' ') { continue; }
-    let sChar = s[i].toLowerCase();
-    hash1[sChar] = (hash1[sChar] || 0) + 1;
+    if (s[i] !== ' ') {
+      let sChar = s[i].toLowerCase();
+      hash1[sChar] = (hash1[sChar] || 0) + 1;
+    }
   }
   for (let i = 0; i < t.length; i++) {
-    if (t[i] === ' ') { continue; }
-    let tChar = t[i].toLowerCase();
-    hash2[tChar] = (hash2[tChar] || 0) + 1;
+    if (t[i] !== ' ') {
+      let tChar = t[i].toLowerCase();
+      hash2[tChar] = (hash2[tChar] || 0) + 1;
+    }
   }
 
   for (let key in hash1) {

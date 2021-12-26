@@ -224,3 +224,28 @@ var isAnagram = function (s, t) {
 
   return Object.keys(hash1).length === Object.keys(hash2).length;
 };
+
+// 21. Merge Two Sorted Lists - https://leetcode.com/problems/merge-two-sorted-lists/
+var mergeTwoLists = function (list1, list2) {
+  function ListNode(val, next) {
+    this.val = (val === undefined ? 0 : val)
+    this.next = (next === undefined ? null : next)
+  }
+
+  let head = new ListNode();
+  let tail = head;
+
+  while (list1 && list2) {
+    if (list1.val < list2.val) {
+      tail.next = list1;
+      list1 = list1.next;
+    } else {
+      tail.next = list2;
+      list2 = list2.next;
+    }
+    tail = tail.next;
+  }
+  tail.next = list1 || list2;
+
+  return head.next;
+};

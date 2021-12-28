@@ -205,5 +205,13 @@ describe('missingNumber', () => {
   it('Should return 2 for [9,6,4,2,3,5,7,0,1]', () => {
     expect(missingNumber([9,6,4,2,3,5,7,0,1])).toEqual(8);
   });
+});
 
+describe('findDisappearedNumbers', () => {
+  it('Should return [5,6] for input [4,3,2,7,8,2,3,1]', () => {
+    expect(findDisappearedNumbers([4,3,2,7,8,2,3,1])).toEqual([5,6]);
+  });
+  it('Should return [2] for input [1,1]', () => {
+    expect(findDisappearedNumbers([1,1])).toEqual([2]);
+  });
 });

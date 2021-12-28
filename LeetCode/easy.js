@@ -261,15 +261,15 @@ var missingNumber = function(nums) {
 
 // 448. Find All Numbers Disappeared in an Array - https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/
 var findDisappearedNumbers = function(nums) {
-  const hash = {};
+  const hash = new Set();
   const missing = [];
 
   for (let i = 0; i < nums.length; i++) {
-    hash[nums[i]] = i;
+    hash.add(nums[i]);
   }
 
   for (let i = 1; i <= nums.length; i++) {
-    if (hash[i] === undefined) {
+    if (!hash.has(i)) {
       missing.push(i);
     }
   }

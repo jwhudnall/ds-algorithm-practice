@@ -277,6 +277,7 @@ var findDisappearedNumbers = function(nums) {
 };
 
 // 136. Single Number - https://leetcode.com/problems/single-number/
+// XOR operations leaves oddball value within array
 var singleNumber = function(nums) {
   let result = 0;
   for (let num of nums) {

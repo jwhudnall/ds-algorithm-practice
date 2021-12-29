@@ -275,3 +275,12 @@ var findDisappearedNumbers = function(nums) {
   }
   return missing;
 };
+
+// 136. Single Number - https://leetcode.com/problems/single-number/
+var singleNumber = function(nums) {
+  let result = 0;
+  for (let num of nums) {
+    result ^= num;
+  }
+  return result;
+};

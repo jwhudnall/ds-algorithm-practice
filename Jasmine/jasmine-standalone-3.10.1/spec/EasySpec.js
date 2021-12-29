@@ -215,3 +215,15 @@ describe('findDisappearedNumbers', () => {
     expect(findDisappearedNumbers([1,1])).toEqual([2]);
   });
 });
+
+describe('singleNumber', () => {
+  it('Should return 1 for nums = [2,2,1]', () => {
+    expect(singleNumber([2,2,1])).toEqual(1);
+  });
+  it('Should return 4 for nums = [4,1,2,1,2]', () => {
+    expect(singleNumber([4,1,2,1,2])).toEqual(4);
+  });
+  it('Should return 1 for nums = [1]', () => {
+    expect(singleNumber([1])).toEqual(1);
+  });
+});

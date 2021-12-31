@@ -251,7 +251,7 @@ var mergeTwoLists = function (list1, list2) {
 };
 
 // 268. Missing Number - https://leetcode.com/problems/missing-number/
-var missingNumber = function(nums) {
+var missingNumber = function (nums) {
   const n = nums.length;
   const fullSum = n * (n + 1) / 2;
   const actualSum = nums.reduce((total, acc) => total + acc);
@@ -260,7 +260,7 @@ var missingNumber = function(nums) {
 };
 
 // 448. Find All Numbers Disappeared in an Array - https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/
-var findDisappearedNumbers = function(nums) {
+var findDisappearedNumbers = function (nums) {
   const hash = new Set();
   const missing = [];
 
@@ -278,7 +278,7 @@ var findDisappearedNumbers = function(nums) {
 
 // 136. Single Number - https://leetcode.com/problems/single-number/
 // XOR operations leaves oddball value within array
-var singleNumber = function(nums) {
+var singleNumber = function (nums) {
   let result = 0;
   for (let num of nums) {
     result ^= num;
@@ -287,14 +287,25 @@ var singleNumber = function(nums) {
 };
 
 // 338. Counting Bits - https://leetcode.com/problems/counting-bits/
-var countBits = function(n) {
-  const result = [];
+// - Video: https://www.youtube.com/watch?v=RyBM56RIWrM
+var countBits = function (n) {
+  // const result = [];
 
-  for (let i = 0; i <= n; i++) {
-    let binary = (i).toString(2);
-    let onesCount = binary.split('1').length - 1;
-    result.push(onesCount);
+  // for (let i = 0; i <= n; i++) {
+  //   let binary = (i).toString(2);
+  //   let onesCount = binary.split('1').length - 1;
+  //   result.push(onesCount);
+  // }
+
+  // return result;
+  let dp = new Array(n + 1).fill(0, 0, (n + 1));
+  let offset = 1;
+
+  for (let i = 1; i <= n; i++) {
+    if (offset * 2 === i) {
+      offset = i;
+    }
+    dp[i] = 1 + dp[i - offset]
   }
-
-  return result;
-};
+  return dp;
+}

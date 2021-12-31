@@ -285,3 +285,16 @@ var singleNumber = function(nums) {
   }
   return result;
 };
+
+// 338. Counting Bits - https://leetcode.com/problems/counting-bits/
+var countBits = function(n) {
+  const result = [];
+
+  for (let i = 0; i <= n; i++) {
+    let binary = (i).toString(2);
+    let onesCount = binary.split('1').length - 1;
+    result.push(onesCount);
+  }
+
+  return result;
+};

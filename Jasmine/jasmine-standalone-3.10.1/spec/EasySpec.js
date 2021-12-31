@@ -227,3 +227,12 @@ describe('singleNumber', () => {
     expect(singleNumber([1])).toEqual(1);
   });
 });
+
+describe('countBits', () => {
+  it('Should return [0, 1, 1] for input 2', () => {
+    expect(countBits(2)).toEqual([0,1,1]);
+  });
+  it('Should return [0,1,1,2,1,2] for input 5', () => {
+    expect(countBits(5)).toEqual([0,1,1,2,1,2]);
+  });
+});

@@ -197,31 +197,31 @@ describe('isAnagram', () => {
 
 describe('missingNumber', () => {
   it('Should return 2 for [3,0,1]', () => {
-    expect(missingNumber([3,0,1])).toEqual(2);
+    expect(missingNumber([3, 0, 1])).toEqual(2);
   });
   it('Should return 2 for [0,1]', () => {
-    expect(missingNumber([0,1])).toEqual(2);
+    expect(missingNumber([0, 1])).toEqual(2);
   });
   it('Should return 2 for [9,6,4,2,3,5,7,0,1]', () => {
-    expect(missingNumber([9,6,4,2,3,5,7,0,1])).toEqual(8);
+    expect(missingNumber([9, 6, 4, 2, 3, 5, 7, 0, 1])).toEqual(8);
   });
 });
 
 describe('findDisappearedNumbers', () => {
   it('Should return [5,6] for input [4,3,2,7,8,2,3,1]', () => {
-    expect(findDisappearedNumbers([4,3,2,7,8,2,3,1])).toEqual([5,6]);
+    expect(findDisappearedNumbers([4, 3, 2, 7, 8, 2, 3, 1])).toEqual([5, 6]);
   });
   it('Should return [2] for input [1,1]', () => {
-    expect(findDisappearedNumbers([1,1])).toEqual([2]);
+    expect(findDisappearedNumbers([1, 1])).toEqual([2]);
   });
 });
 
 describe('singleNumber', () => {
   it('Should return 1 for nums = [2,2,1]', () => {
-    expect(singleNumber([2,2,1])).toEqual(1);
+    expect(singleNumber([2, 2, 1])).toEqual(1);
   });
   it('Should return 4 for nums = [4,1,2,1,2]', () => {
-    expect(singleNumber([4,1,2,1,2])).toEqual(4);
+    expect(singleNumber([4, 1, 2, 1, 2])).toEqual(4);
   });
   it('Should return 1 for nums = [1]', () => {
     expect(singleNumber([1])).toEqual(1);
@@ -230,9 +230,31 @@ describe('singleNumber', () => {
 
 describe('countBits', () => {
   it('Should return [0, 1, 1] for input 2', () => {
-    expect(countBits(2)).toEqual([0,1,1]);
+    expect(countBits(2)).toEqual([0, 1, 1]);
   });
   it('Should return [0,1,1,2,1,2] for input 5', () => {
-    expect(countBits(5)).toEqual([0,1,1,2,1,2]);
+    expect(countBits(5)).toEqual([0, 1, 1, 2, 1, 2]);
+  });
+});
+
+describe('hasCycle', () => {
+
+  it('Should return true for Linked List input [3,2,0,-4]', () => {
+    function ListNode(val) {
+      this.val = val;
+      this.next = null;
+    };
+
+    const linkedList = new ListNode(3);
+    const second = new ListNode(2);
+    const third = new ListNode(0);
+    const fourth = new ListNode(-4);
+
+    linkedList.next = second;
+    second.next = third;
+    third.next = fourth;
+    fourth.next = second;
+
+    expect(hasCycle(linkedList)).toEqual(true);
   });
 });

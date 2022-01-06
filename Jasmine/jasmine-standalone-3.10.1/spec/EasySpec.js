@@ -258,3 +258,46 @@ describe('hasCycle', () => {
     expect(hasCycle(linkedList)).toEqual(true);
   });
 });
+
+describe('middleNode', () => {
+  it('Should return the third node from a list of 5', () => {
+    function ListNode(val, next) {
+      this.val = (val === undefined ? 0 : val)
+      this.next = (next === undefined ? null : next)
+    }
+    const first = new ListNode(1);
+    const second = new ListNode(2);
+    const third = new ListNode(3);
+    const fourth = new ListNode(4);
+    const fifth = new ListNode(5);
+
+    first.next = second;
+    second.next = third;
+    third.next = fourth;
+    fourth.next = fifth;
+
+    expect(middleNode(first)).toEqual(third);
+  });
+
+  it('Should return the first node from a list of 1', () => {
+    function ListNode(val, next) {
+      this.val = (val === undefined ? 0 : val)
+      this.next = (next === undefined ? null : next)
+    }
+    const first = new ListNode(1);
+
+    expect(middleNode(first)).toEqual(first);
+  });
+
+  it('Should return the second node from a list of 2', () => {
+    function ListNode(val, next) {
+      this.val = (val === undefined ? 0 : val)
+      this.next = (next === undefined ? null : next)
+    }
+    const first = new ListNode(1);
+    const second = new ListNode(2);
+    first.next = second;
+
+    expect(middleNode(first)).toEqual(second);
+  });
+})

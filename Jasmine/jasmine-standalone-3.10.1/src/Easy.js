@@ -325,3 +325,11 @@ var hasCycle = function(head) {
 
   return false;
 };
+
+// 876. Middle of the Linked List - https://leetcode.com/problems/middle-of-the-linked-list/
+var middleNode = function(head) {
+  // Slow and fast pointers
+  // fast moves first, 2 spaces
+  // slow moves second, 1 space
+  // as soon as fast's next is null, return slows position
+}

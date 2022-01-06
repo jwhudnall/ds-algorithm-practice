@@ -328,8 +328,13 @@ var hasCycle = function(head) {
 
 // 876. Middle of the Linked List - https://leetcode.com/problems/middle-of-the-linked-list/
 var middleNode = function(head) {
-  // Slow and fast pointers
-  // fast moves first, 2 spaces
-  // slow moves second, 1 space
-  // as soon as fast's next is null, return slows position
+  // Slow and fast pointers. Terminate when !fast || !fast.next
+  let slow = head;
+  let fast = head;
+
+  while (fast && fast.next) {
+    fast = fast.next.next || null;
+    slow = slow.next || null;
+  }
+  return slow;
 }
